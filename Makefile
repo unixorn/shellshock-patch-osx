@@ -60,8 +60,7 @@ sh: bake_bash
 	cp bash-92/build/Release/sh .
 
 zap:
-	@rm -fr bash-92 bash sh
-	#@rm -fr ${SOURCES} bash-92
+	@rm -fr ${SOURCES} bash-92 bash sh
 
 l_bin: l_root
 	@sudo mkdir -p ${WORK_D}/bin
