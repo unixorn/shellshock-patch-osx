@@ -32,7 +32,7 @@ SOURCES=bash-92.tar.gz bash32-052 bash32-053 bash32-054
 
 shellshock_binaries: bash sh
 
-sources: bash_tarball bash_patches
+sources: bash_tarball bash_patches apply_patches
 
 bash_tarball: bash-92.tar.gz
 
@@ -53,12 +53,12 @@ bash32-054:
 burst_tarball: ${SOURCES}
 	@tar xvzf bash-92.tar.gz
 
-apply_patches: burst_tarball
+apply_patches: burst_tarball bash_patches
 	cd bash-92/bash-3.2; patch -p0 < ../../bash32-052
 	cd bash-92/bash-3.2; patch -p0 < ../../bash32-053
 	cd bash-92/bash-3.2; patch -p0 < ../../bash32-054
 
-bake_bash: burst_tarball apply_patches
+bake_bash: sources
 	cd bash-92; time xcodebuild
 
 bash: bake_bash
