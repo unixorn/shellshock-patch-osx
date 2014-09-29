@@ -10,7 +10,7 @@ This applies the following patches:
 
 # Pre-requisites
 * XCode, along with the command line tools
-* [The Luggage](https://github.com/unixorn/luggage)
+* [The Luggage](https://github.com/unixorn/luggage). If you get an error about packagemaker, try `sudo USE_PKGBUILD=1 make bootstrap_files` in your Luggage clone.
 
 # Usage
 1. Clone this repository
