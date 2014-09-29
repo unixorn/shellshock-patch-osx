@@ -1,7 +1,7 @@
 shellshock-patch-osx
 ====================
 
-This will download Apple's bash source, patch it, build it, and create a pkg file for you.
+This will download Apple's bash source, patch it, build it, and create a pkg file for you, then optionally wrap it in a dmg or zip file to make distributing it easier.
 
 This applies the following patches:
 * bash32-052 - CVE-2014-6271 (aka shellshock)
@@ -17,7 +17,7 @@ This applies the following patches:
 2. cd into the repository
 3. `make dmg`
 
-It takes less than a minute to generate the dmg with a pkg inside on my MBP. If you just want the pkg file, do `make pkg`
+It takes less than a minute to generate the dmg with a pkg inside on my MBP. If you just want the pkg file, do `make pkg`, if you want it packed in a zip file instead of a dmg, `make zip`. 
 
 # Caveats
 * I've only used this on 10.9. I don't admin OS X for a living any more, so I don't have spare machines with stale OS versions to test on any more. That said, it isn't doing anything all that special and should work on any version of OS X that has `/usr/bin/pkgbuild` and XCode. If you need to use packagemaker, comment out line 17 in the Makefile, `USE_PKGBUILD=1`, 
