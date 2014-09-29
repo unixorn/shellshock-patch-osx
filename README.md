@@ -3,6 +3,11 @@ shellshock-patch-osx
 
 This will download Apple's bash source, patch it, build it, and create a pkg file for you.
 
+This applies the following patches:
+* bash32-052 - CVE-2014-6271 (aka shellshock)
+* bash32-053 - CVE-2014-7169 (aka aftershock)
+* bash32-054 - CVE-2014-6277 (another bash bug)
+
 # Pre-requisites
 * XCode, along with the command line tools
 * [The Luggage](https://github.com/unixorn/luggage)
