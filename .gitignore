@@ -1,0 +1,7 @@
+.DS_Store
+*.*~
+*.dmg
+*.gz
+*.o
+*.pkg
+*.zip
